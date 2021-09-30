@@ -1,7 +1,8 @@
 {
   "name": "@microfrontends/root-config",
   "scripts": {
-    "start": "webpack serve --port 9000 --env isLocal",
+    "serve:mf-container": "webpack serve --port 9000 --env isLocal",
+    "start": "node server.js",
     "lint": "eslint src --ext js,ts,tsx",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
     "format": "prettier --write .",
@@ -46,8 +47,9 @@
   "dependencies": {
     "@types/jest": "^27.0.1",
     "@types/systemjs": "^6.1.1",
-    "single-spa": "^5.9.3",
-    "@types/webpack-env": "^1.16.2"
+    "@types/webpack-env": "^1.16.2",
+    "express": "^4.17.1",
+    "single-spa": "^5.9.3"
   },
   "types": "dist/microfrontends-root-config.d.ts"
 }

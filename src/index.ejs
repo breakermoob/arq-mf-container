@@ -45,7 +45,8 @@
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
 
   <!-- Add your organization's prod import map URL to this script's src  -->
-  <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
+  <script type="systemjs-importmap"
+    src="https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/%40microfrontends/importmap.json"></script>
 
   <% if (isLocal) { %>
     <script type="systemjs-importmap">
