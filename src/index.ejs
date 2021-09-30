@@ -35,18 +35,25 @@
 
     More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
   -->
-  <!-- <script type="systemjs-importmap">
+  <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js",
+        "@microfrontends/root-config": "https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/@microfrontends/root-config/microfrontends-root-config.js",
+        "@microfrontends/mf-header": "https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/@microfrontends/mf-header/microfrontends-mf-header.js",
+        "@microfrontends/mf-gallery": "https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/@microfrontends/mf-gallery/main.js",
+        "@microfrontends/mf-details": "https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/@microfrontends/mf-details/main.js",
+        "@microfrontends/mf-footer": "https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/@microfrontends/mf-footer/app.js"
       }
     }
-  </script> -->
+  </script>
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
 
   <!-- Add your organization's prod import map URL to this script's src  -->
-  <script type="systemjs-importmap"
-    src="https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/%40microfrontends/importmap.json"></script>
+  <!-- <script type="systemjs-importmap"
+    src="https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/%40microfrontends/importmap.json"></script> -->
 
   <% if (isLocal) { %>
     <script type="systemjs-importmap">
@@ -54,17 +61,21 @@
       "imports": {
         "react": "https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.production.min.js",
         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js",
-        "@microfrontends/root-config": "//localhost:9000/microfrontends-root-config.js",
-        "@microfrontends/mf-header": "//localhost:4100/microfrontends-mf-header.js",
-        "@microfrontends/mf-gallery": "//localhost:4200/main.js",
-        "@microfrontends/mf-profile": "//localhost:4300/main.js",
-        "@microfrontends/mf-details": "//localhost:4400/main.js",
-        "@microfrontends/mf-footer": "//localhost:4500/js/app.js"
+        "@microfrontends/root-config": "https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/@microfrontends/root-config/microfrontends-root-config.js",
+        "@microfrontends/mf-header": "https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/@microfrontends/mf-header/microfrontends-mf-header.js",
+        "@microfrontends/mf-gallery": "https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/@microfrontends/mf-gallery/main.js",
+        "@microfrontends/mf-details": "https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/@microfrontends/mf-details/main.js",
+        "@microfrontends/mf-footer": "https://arq-microfrontends-single-spa-lion.s3.us-west-2.amazonaws.com/@microfrontends/mf-footer/app.js"
       }
     }
   </script>
     <% } %>
 
+      <!-- "@microfrontends/mf-header": "//localhost:4100/microfrontends-mf-header.js",
+    "@microfrontends/mf-gallery": "//localhost:4200/main.js",
+    "@microfrontends/mf-profile": "//localhost:4300/main.js",
+    "@microfrontends/mf-details": "//localhost:4400/main.js",
+    "@microfrontends/mf-footer": "//localhost:4500/js/app.js" -->
       <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
     Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
