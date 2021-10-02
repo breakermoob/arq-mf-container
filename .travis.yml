@@ -11,9 +11,6 @@ before_install:
   - pip install awscli
 script:
   - yarn build
-  - echo "Commit sha - $TRAVIS_COMMIT"
-  - mkdir -p dist/@microfrontends/root-config/
-  - mv dist/*.* dist/@microfrontends/root-config/
 deploy:
   provider: s3
   access_key_id: "$AWS_ACCESS_KEY_ID"
