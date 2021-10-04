@@ -107,20 +107,6 @@
   </main>
   <footer id="single-spa-application:@microfrontends/mf-footer"></footer>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
-  <script>
-    var PERMITTED_DOMAIN = "https://admin.microfrontends.rocks/";
-    window.addEventListener('mensaje', function (evento) {
-      if (event.origin === PERMITTED_DOMAIN) {
-        // var msg = JSON.parse (event.data); 
-        // var msgKey = Object.keys(msg)[0];
-        if (event.data) {
-          localStorage.setItem("localstorage", event.data);
-        } else {
-          localStorage.removeItem("localstorage");
-        }
-      }
-    });
-  </script>
 </body>
 
 </html>

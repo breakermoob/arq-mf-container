@@ -10,7 +10,7 @@ before_install:
   - pip install -U pip
   - pip install awscli
 script:
-  - yarn build
+  - npm run build:webpack
 deploy:
   provider: s3
   access_key_id: "$AWS_ACCESS_KEY_ID"

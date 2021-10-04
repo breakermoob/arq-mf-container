@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getlocalstorage</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var PERMITTED_DOMAIN = "https://admin.microfrontends.rocks/";
+        window.addEventListener('mensaje', function (evento) {
+            console.log(evento);
+            if (event.origin === PERMITTED_DOMAIN) {
+                // var msg = JSON.parse (event.data); 
+                // var msgKey = Object.keys(msg)[0];
+                if (event.data) {
+                    localStorage.setItem("localstorage", event.data);
+                } else {
+                    localStorage.removeItem("localstorage");
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
